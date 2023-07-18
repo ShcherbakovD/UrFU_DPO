@@ -1,0 +1,35 @@
+{
+    "author": "Dmitry Shcherbakov",
+    "exported_at": "2022-08-11T22:25:22",
+    "expressions": [
+        {
+            "description": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>",
+            "expression": "degrees(azimuth(make_point($x_at(0),$y_at(0)), make_point($x_at(1),$y_at(1))))",
+            "group": "user",
+            "name": "Азимут ракурса by Shcherbakov",
+            "type": "expression"
+        },
+        {
+            "description": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>",
+            "expression": "90-degrees(atan2(distance(make_point($x_at(0),$y_at(0)),make_point($x_at(1),$y_at(1))),(z_max( $geometry)-z_min( $geometry))))",
+            "group": "user",
+            "name": "Наклон камеры вниз относительно линии горизонта by Shcherbakov",
+            "type": "expression"
+        },
+        {
+            "description": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><br /></p></body></html>",
+            "expression": "distance(make_point($x_at(0),$y_at(0)),make_point($x_at(1),$y_at(1)))",
+            "group": "user",
+            "name": "Расстояние в двумерном пространстве по координатам XY by Shcherbakov",
+            "type": "expression"
+        },
+        {
+            "description": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>",
+            "expression": "sqrt(($x_at(0)-$x_at(1))^(2)+($y_at(0)-$y_at(1))^(2)+(z_max($geometry)-z_min($geometry))^(2))",
+            "group": "user",
+            "name": "Расстояние в трехмерном пространстве по координатам XYZ by Shcherbakov",
+            "type": "expression"
+        }
+    ],
+    "qgis_version": "3.26.1-Buenos Aires"
+}
